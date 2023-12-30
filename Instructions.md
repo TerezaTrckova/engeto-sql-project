@@ -18,10 +18,12 @@ czechia_price_category – Číselník kategorií potravin, které se vyskytují
 
 ### Číselníky sdílených informací o ČR:
 czechia_region – Číselník krajů České republiky dle normy CZ-NUTS 2.
+
 czechia_district – Číselník okresů České republiky dle normy LAU.
 
 ### Dodatečné tabulky:
 countries - Všemožné informace o zemích na světě, například hlavní město, měna, národní jídlo nebo průměrná výška populace.
+
 economies - HDP, GINI, daňová zátěž, atd. pro daný stát a rok.
 
 ## Výzkumné otázky
