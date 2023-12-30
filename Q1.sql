@@ -19,12 +19,11 @@ ORDER BY t.industry_name;
 SELECT * FROM view_Q1a;
 -- procentuální růst mezd všech odvětví za celé období 2006-2018
 SELECT  
-	concat (round(avg(change_),2), '%') AS total_avg,
+	concat (round(avg(change_),2), ' %') AS total_growth,
 	industry_name
 FROM view_Q1a
 GROUP BY industry_name
-having total_avg != 0
-ORDER BY total_avg DESC;
+ORDER BY total_growth DESC;
 
 -- Odvětví, u kterých se objevil alespoň v jednom roce meziroční pokles mezd 
 CREATE OR REPLACE VIEW view_Q1b AS 
@@ -50,7 +49,7 @@ SELECT * FROM view_Q1b;
 
 SELECT 
 	time_range,		
-	concat (decline,'%') AS decline,
+	concat (decline,' %') AS decline,
 	industry_name
 FROM view_Q1b
 having decline < 0
