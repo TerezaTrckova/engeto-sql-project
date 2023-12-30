@@ -33,13 +33,15 @@ ORDER BY cpc.name, YEAR(cp.date_from);
 
 -- Spojení dvou pomocných tabulek do finální tabulky mezd a cen potravin za ČR sjednocených na totožné porovnatelné období 
 CREATE OR REPLACE TABLE t_tereza_trckova_project_SQL_primary_final AS 
-SELECT 
-* FROM Payroll_semifinal pas
+SELECT * 
+	FROM Payroll_semifinal pas
 JOIN Price_semifinal prs
-ON pas.payroll_year=prs.YEAR;
+	ON pas.payroll_year=prs.YEAR;
 
 -- porovnatelné období 2006-2018 
-SELECT * FROM t_tereza_trckova_project_SQL_primary_final
+SELECT 
+	* 
+FROM t_tereza_trckova_project_SQL_primary_final
 ORDER BY year DESC;
 
 
