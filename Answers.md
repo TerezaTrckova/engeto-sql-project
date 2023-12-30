@@ -9,6 +9,7 @@ Počátkem období je rok 2006, posledním sledovaným rok je 2018. K analýze z
 Co se týká zaměstnanců jednotlivých odvětví, nejvíce si za svou průměrnou měsíční hrubou mzdu v roce 2006  mohli pořídit zaměstnanci v **peněžnictví a pojišťovnictví** (**40 027 Kč**), konkrétně **2771,95 l** mléka a **2483,06 kg** chleba. V roce 2018 si nejvíce mohli dovolit pracující v informační a komunikační činnosti (**56 728 Kč**), konkrétně **2862,16 l** mléka a **2340,26** kg chleba. 
 
 ## Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?
+Za celé sledované období 2006-2018 nejpomaleji zdražoval **cukr krystalový**, ten totiž dokonce za dané období zlevnil a to o **1,92 %**, dále zlevnila **rajská jablka červená kulatá** (o 0,74 %). Na opačném konci stojí **papriky**, ty zdražily nejvíce a to o **7,29 %** celkem. **Papriky** také zaznamenaly nejvyšší meziroční nárůst ceny vůbec, mezi lety 2006 a 2007 jejich cena vzrostla o **94,82 %**. Je zajímavé, že ve stejném období (2006-2007) bylo zaznamenáno zároveň největší zlevnění u jiné zeleniny a to u **rajských jablek o 30,28 %**.
 
 ## Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
 
