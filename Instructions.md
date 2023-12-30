@@ -1,4 +1,5 @@
-# Engeto_SQL_project_Tereza_Trckova
+## Engeto_SQL_project_Tereza_Trckova_data_academy_2023_09_26
+
 
 # Zadání projektu
 ## Úvod do projektu
