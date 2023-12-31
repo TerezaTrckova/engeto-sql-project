@@ -1,4 +1,5 @@
 # SQL projekt, vypracován v rámci Engeto datové akademie 
+#### Discord kontakt: tereza_trckova
 ## Struktura projektu
 #### Answers
 #### Instructions
