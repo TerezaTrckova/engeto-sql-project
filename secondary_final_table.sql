@@ -1,4 +1,4 @@
--- secondary tabulka
+-- secondary finální tabulka 
 CREATE OR REPLACE TABLE t_tereza_trckova_project_SQL_secondary_final AS 
 SELECT  
 	e.`year`,
