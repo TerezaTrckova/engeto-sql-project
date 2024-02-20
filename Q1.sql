@@ -19,7 +19,7 @@ ORDER BY t.industry_name;
 SELECT * FROM mezirocni_zmena_mezd;
 -- procentuální růst mezd všech odvětví za celé období 2006-2018
 SELECT  
-	CONCAT (round(avg(change_),2), ' %') AS total_growth,
+	CONCAT (ROUND(AVG(change_),2), ' %') AS total_growth,
 	industry_name
 FROM mezirocni_zmena_mezd
 GROUP BY industry_name
@@ -49,7 +49,7 @@ SELECT * FROM mezirocni_pokles_mezd;
 
 SELECT 
 	time_range,		
-	concat (decline,' %') AS decline,
+	CONCAT (decline,' %') AS decline,
 	industry_name
 FROM mezirocni_pokles_mezd
 having decline < 0
