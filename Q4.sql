@@ -1,35 +1,35 @@
 -- Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
 
 -- výpočet průměrné mzdy a potravinového koše (souhrn cen potravin) za jednotlivé roky
-CREATE OR REPLACE VIEW v_4Q AS 
+CREATE OR REPLACE VIEW rocni_prumery AS 
 SELECT 
-  `year`,
-  round (avg(average_salary),0) AS avg_salary_CR,
-  round (avg(average_price),2) AS food_price
+  	year,
+  	ROUND (AVG(average_salary),0) AS avg_salary_CR,
+  	ROUND (AVG(average_price),2) AS food_price
 FROM t_tereza_trckova_project_sql_primary_final tttpspf 
-GROUP BY `year`
-ORDER BY `year`; 
+GROUP BY year
+ORDER BY year; 
 
 -- pomocný view, připojený view z minulého kroku sama na sebe, výpočet procentuální meziroční změny 
-CREATE OR REPLACE VIEW v_4Qa AS 
+CREATE OR REPLACE VIEW mezirocni_zmena AS 
 SELECT 
-  v4.YEAR AS previous_year,
-  v4.avg_salary_CR AS previous_salary,
-  v4.food_price AS previuous_food_price,
-  v41.YEAR AS current_year,
-  v41.avg_salary_CR AS current_salary,
-  v41.food_price AS current_food_price,
-concat(v4.YEAR, '-', v41.YEAR) AS time_range,
-round ((v41.avg_salary_CR-v4.avg_salary_CR)/v4.avg_salary_CR*100,2) AS 'salary_change',
-round((v41.food_price-v4.food_price)/v4.food_price*100,2) AS 'foodprice_change'
-FROM v_4Q v4
-JOIN v_4Q v41
-ON v4.YEAR=v41.YEAR-1;
+	rp.YEAR AS previous_year,
+ 	rp.avg_salary_CR AS previous_salary,
+	rp.food_price AS previuous_food_price,
+	rp1.year AS current_year,
+	rp1.avg_salary_CR AS current_salary,
+	rp1.food_price AS current_food_price,
+CONCAT (rp.year, '-', rp1.year) AS time_range,
+ROUND ((rp1.avg_salary_CR-rp.avg_salary_CR)/rp.avg_salary_CR*100,2) AS 'salary_change',
+ROUND ((rp1.food_price-rp.food_price)/rp.food_price*100,2) AS 'foodprice_change'
+FROM rocni_prumery rp
+JOIN rocni_prumery rp1
+ON rp.year=rp1.year-1;
 
 -- uspořádání dat, konečný výsledek 
 SELECT 
 	time_range, 
-	concat ( salary_change,' %') AS salary_change,
-	concat ( foodprice_change,' %') AS foodprice_change,
+	CONCAT (salary_change,' %') AS salary_change,
+	CONCAT (foodprice_change,' %') AS foodprice_change,
 	salary_change-foodprice_change AS salary_food_difference
-FROM v_4Qa;
+FROM mezirocni_zmena;
